@@ -43,9 +43,9 @@
   --shadow: 0 25px 60px rgba(0,0,0,0.85); --nav-bg: rgba(5,6,15,0.94);
   --overlay: rgba(0,0,0,0.88); --grid-line: rgba(99,102,241,0.07);
 }
-
+ 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
+ 
 body {
   background: var(--bg); color: var(--text);
   font-family: 'Space Grotesk', sans-serif; min-height: 100vh;
@@ -57,7 +57,7 @@ body::before {
   background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 60px 60px; pointer-events: none; z-index: 0; transition: background-image 0.5s ease;
 }
-
+ 
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -80,7 +80,7 @@ nav {
   0%,100% { opacity: 1; box-shadow: 0 0 10px var(--green), 0 0 20px rgba(34,197,94,0.4); }
   50% { opacity: 0.6; box-shadow: 0 0 5px var(--green); }
 }
-
+ 
 /* ── THEME CYCLER BUTTON ── */
 .theme-cycler-btn {
   background: var(--card2); border: 1px solid var(--border);
@@ -90,7 +90,7 @@ nav {
 }
 .theme-cycler-btn:hover { border-color: var(--accent); transform: scale(1.05); box-shadow: 0 0 16px var(--glow); }
 .theme-cycler-btn .theme-label { font-size: 11px; font-family: 'Geist Mono', monospace; color: var(--muted); letter-spacing: 1px; font-weight: 600; }
-
+ 
 /* ── THEME PICKER DROPDOWN ── */
 .theme-picker-wrap { position: relative; }
 .theme-picker-dropdown {
@@ -112,13 +112,13 @@ nav {
 .theme-option:hover { background: var(--card2); color: var(--accent); }
 .theme-option.active { background: rgba(255,255,255,0.06); color: var(--accent); }
 .theme-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
-
+ 
 /* ── MAIN ── */
 main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .screen { display: none; }
 .screen.active { display: block; animation: slideIn 0.5s cubic-bezier(0.16,1,0.3,1); }
 @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
+ 
 /* ── HERO ── */
 .hero { padding: 60px 28px 50px; max-width: 1200px; margin: 0 auto; position: relative; }
 .hero::before {
@@ -139,7 +139,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .hero h1 { font-size: clamp(42px,8vw,90px); font-weight: 700; line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 24px; }
 .hero h1 span { background: linear-gradient(135deg, var(--accent) 0%, var(--accent3) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: block; }
 .hero-sub { font-size: 16px; color: var(--text2); max-width: 480px; line-height: 1.7; margin-bottom: 48px; }
-
+ 
 /* ── LOCATIONS ── */
 .locations { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin-bottom: 50px; }
 .loc-card {
@@ -155,7 +155,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .loc-country { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
 .loc-speed { font-size: 12px; color: var(--accent); font-family: 'Geist Mono', monospace; display: inline-flex; align-items: center; gap: 5px; font-weight: 600; }
 .loc-ping { font-size: 11px; color: var(--accent3); font-family: 'Geist Mono', monospace; margin-top: 4px; }
-
+ 
 /* ── PRODUCTS ── */
 .products { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 50px; }
 @media(max-width:700px) { .products { grid-template-columns: 1fr; } }
@@ -174,7 +174,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .prod-price .amount { font-size: 32px; font-weight: 700; color: var(--accent); }
 .prod-price .period { font-size: 14px; color: var(--muted); }
 .prod-tag { display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--accent3); border-radius: 8px; padding: 5px 12px; font-size: 11px; letter-spacing: 1px; font-family: 'Geist Mono', monospace; margin-bottom: 20px; font-weight: 600; }
-
+ 
 /* ── BUTTONS ── */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
@@ -192,18 +192,18 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .btn-success:hover { background: rgba(34,197,94,0.25); }
 .btn-full { width: 100%; }
 .btn-sm { padding: 9px 16px; font-size: 13px; border-radius: 9px; }
-
+ 
 /* ── PAGE HEADER ── */
 .page-header { padding: 36px 28px 0; max-width: 850px; margin: 0 auto; }
 .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; cursor: pointer; padding: 8px 0; margin-bottom: 24px; background: none; border: none; transition: all 0.2s; font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
 .back-btn:hover { color: var(--accent); transform: translateX(-4px); }
 .page-title { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
 .page-sub { color: var(--muted); font-size: 15px; }
-
+ 
 /* ── PAYMENT SECTION ── */
 .payment-section { padding: 32px; max-width: 850px; margin: 0 auto; }
 .section-title { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; font-weight: 700; }
-
+ 
 /* ── PAY METHODS ── */
 .pay-methods { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
 @media(max-width:500px) { .pay-methods { grid-template-columns: 1fr; } }
@@ -213,7 +213,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .pay-card-icon { font-size: 32px; margin-bottom: 12px; }
 .pay-card-title { font-size: 17px; font-weight: 700; margin-bottom: 5px; }
 .pay-card-sub { font-size: 12px; color: var(--muted); }
-
+ 
 /* ── INFO BLOCK ── */
 .info-block { background: var(--card2); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 24px; }
 .info-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); }
@@ -222,7 +222,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .info-value { font-family: 'Geist Mono', monospace; font-size: 13px; display: flex; align-items: center; gap: 8px; font-weight: 600; }
 .copy-btn { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px 8px; border-radius: 6px; font-size: 12px; transition: all 0.2s; font-weight: 600; }
 .copy-btn:hover { color: var(--accent); background: rgba(255,255,255,0.06); }
-
+ 
 /* ── UPLOAD ── */
 .upload-area { border: 2px dashed var(--border); border-radius: 16px; padding: 48px 24px; text-align: center; cursor: pointer; transition: all 0.3s; background: rgba(255,255,255,0.02); margin-bottom: 24px; position: relative; }
 .upload-area:hover { border-color: var(--accent); background: rgba(255,255,255,0.05); transform: translateY(-2px); }
@@ -231,7 +231,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .upload-area:hover .upload-icon { transform: scale(1.1); }
 .upload-text { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
 .upload-sub { font-size: 12px; color: var(--muted); }
-
+ 
 /* ── SUBSCRIPTION CARD ── */
 .subscription-card { background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border: 1px solid var(--border); border-radius: 18px; padding: 28px; margin-bottom: 24px; position: relative; overflow: hidden; }
 .sub-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
@@ -243,14 +243,14 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .sub-detail-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700; }
 .sub-detail-value { font-size: 16px; font-weight: 700; }
 .sub-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
+ 
 /* ── VPN KEY BOX ── */
 .vpn-key-box { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 14px; padding: 18px; font-family: 'Geist Mono', monospace; font-size: 12px; word-break: break-all; color: var(--accent); position: relative; cursor: pointer; transition: all 0.3s; margin: 16px 0; user-select: all; }
 .vpn-key-box:hover { background: rgba(255,255,255,0.07); border-color: var(--accent); box-shadow: 0 0 20px var(--glow); }
 .key-copy-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 14px; margin-top: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 12px; color: var(--accent); font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.25s; letter-spacing: 0.5px; }
 .key-copy-btn:hover { background: rgba(255,255,255,0.09); transform: translateY(-2px); box-shadow: 0 6px 20px var(--glow); }
 .key-copy-btn.copied { border-color: var(--accent); color: var(--green); }
-
+ 
 /* ── HAPP ── */
 .happ-instruction { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 26px; margin-bottom: 24px; }
 .happ-header { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
@@ -269,7 +269,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .app-btn-icon { font-size: 22px; }
 .app-btn-name { font-size: 12px; font-weight: 700; }
 .app-btn-store { font-size: 10px; color: var(--muted); }
-
+ 
 /* ── ADMIN ── */
 .admin-grid { display: grid; grid-template-columns: 280px 1fr; gap: 24px; padding: 32px; max-width: 1300px; margin: 0 auto; }
 @media(max-width:900px) { .admin-grid { grid-template-columns: 1fr; } }
@@ -312,13 +312,13 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .field-input { width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; color: var(--text); font-family: 'Geist Mono', monospace; font-size: 14px; outline: none; transition: all 0.2s; }
 .field-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--glow); }
 .field-label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 7px; font-weight: 700; letter-spacing: 0.5px; }
-
+ 
 /* ── TOAST ── */
 .toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(120px); background: var(--card2); border: 1px solid var(--border); border-radius: 12px; padding: 14px 24px; font-size: 14px; font-weight: 700; z-index: 999; transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); white-space: nowrap; }
 .toast.show { transform: translateX(-50%) translateY(0); }
 .toast.success { border-color: rgba(34,197,94,0.4); color: var(--green); }
 .toast.error { border-color: rgba(239,68,68,0.4); color: var(--red); }
-
+ 
 /* ── MODAL ── */
 .modal-overlay { position: fixed; inset: 0; background: var(--overlay); backdrop-filter: blur(12px); z-index: 200; display: none; align-items: center; justify-content: center; padding: 20px; }
 .modal-overlay.active { display: flex; }
@@ -326,18 +326,18 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 @keyframes popIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
 .modal-title { font-size: 24px; font-weight: 800; margin-bottom: 10px; text-align: center; }
 .modal-sub { color: var(--muted); font-size: 14px; line-height: 1.65; margin-bottom: 28px; text-align: center; }
-
+ 
 /* ── SPIN ── */
 .spin-container { text-align: center; padding: 40px 28px; max-width: 480px; margin: 0 auto; }
 .slot-machine { background: var(--card2); border: 2px solid var(--border); border-radius: 22px; padding: 32px; margin: 28px 0; position: relative; overflow: hidden; }
 .slot-machine::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.03), transparent); }
 .slot-value { font-size: 80px; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; position: relative; }
 .slot-label { font-size: 15px; color: var(--muted); position: relative; }
-
+ 
 /* ── SUCCESS OVERLAY ── */
 .modal-overlay { display: none; }
 .modal-overlay.active { display: flex; }
-
+ 
 /* ── VPN ALREADY ACTIVE OVERLAY ── */
 .vpn-active-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 600; display: none; align-items: center; justify-content: center; backdrop-filter: blur(24px); }
 .vpn-active-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
@@ -355,7 +355,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 @keyframes ringPulse { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.4); opacity: 0; } }
 .vpn-active-title { font-size: 26px; font-weight: 800; color: var(--accent); margin-bottom: 10px; }
 .vpn-active-sub { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 32px; }
-
+ 
 /* ── VPN ACTIVATED PERMANENT BANNER ── */
 .vpn-activated-banner {
   position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 650;
@@ -385,7 +385,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .particles-container { position: absolute; inset: 0; pointer-events: none; overflow: hidden; border-radius: 32px; }
 .particle { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: particleFly 1.2s ease-out forwards; }
 @keyframes particleFly { 0% { transform: translate(0,0) scale(1); opacity: 1; } 100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; } }
-
+ 
 /* ── PAY SUCCESS ── */
 .pay-success-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 500; display: none; align-items: center; justify-content: center; backdrop-filter: blur(20px); }
 .pay-success-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
@@ -393,16 +393,16 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 .pay-success-icon { width: 110px; height: 110px; margin: 0 auto 32px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid var(--border); animation: iconPop 0.6s cubic-bezier(0.34,1.56,0.64,1) both; font-size: 48px; }
 .pay-success-title { font-size: 32px; font-weight: 800; margin-bottom: 12px; color: var(--accent); }
 .pay-success-sub { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 32px; }
-
+ 
 /* ── ADMIN FAB ── */
 .admin-toggle { position: fixed; bottom: 28px; right: 28px; z-index: 50; }
 .admin-fab { width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent2)); border: none; color: #050505; font-size: 22px; cursor: pointer; transition: all 0.25s; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow); }
 .admin-fab:hover { transform: scale(1.12); box-shadow: 0 12px 32px var(--glow); }
-
+ 
 /* ── PROXY KEY BOX ── */
 .proxy-key-box { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 14px; padding: 18px; font-family: 'Geist Mono', monospace; font-size: 12px; word-break: break-all; color: var(--accent3); cursor: pointer; transition: all 0.3s; margin: 16px 0; user-select: all; }
 .proxy-key-box:hover { background: rgba(255,255,255,0.07); box-shadow: 0 0 20px var(--glow); }
-
+ 
 /* ── MISC ── */
 .text-center { text-align: center; }
 .text-muted { color: var(--muted); font-size: 13px; }
@@ -412,7 +412,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
   <div class="logo">⚡ FATLESS</div>
@@ -431,9 +431,9 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     </div>
   </div>
 </nav>
-
+ 
 <main>
-
+ 
 <!-- HOME -->
 <div id="screen-home" class="screen active">
   <div class="hero">
@@ -472,7 +472,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     </div>
   </div>
 </div>
-
+ 
 <!-- MY SUBSCRIPTIONS -->
 <div id="screen-mysub" class="screen">
   <div class="page-header">
@@ -509,7 +509,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     </div>
   </div>
 </div>
-
+ 
 <!-- VPN PURCHASE -->
 <div id="screen-vpn" class="screen">
   <div class="page-header">
@@ -551,7 +551,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     <div class="text-muted text-center mt">Обычно активируем за несколько минут</div>
   </div>
 </div>
-
+ 
 <!-- PROXY PURCHASE -->
 <div id="screen-proxy" class="screen">
   <div class="page-header">
@@ -593,7 +593,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     <div class="text-muted text-center mt">Обычно активируем за несколько минут</div>
   </div>
 </div>
-
+ 
 <!-- SPIN -->
 <div id="screen-spin" class="screen">
   <div class="page-header">
@@ -622,7 +622,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     </div>
   </div>
 </div>
-
+ 
 <!-- ADMIN PANEL -->
 <div id="screen-admin" class="screen">
   <div class="page-header" style="padding-bottom:24px">
@@ -691,9 +691,9 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     </div>
   </div>
 </div>
-
+ 
 </main>
-
+ 
 <!-- VPN ALREADY ACTIVE OVERLAY -->
 <div class="vpn-active-overlay" id="vpn-active-overlay">
   <div class="vpn-active-box">
@@ -708,7 +708,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     <button class="btn btn-secondary btn-full" style="border-color:var(--border);color:var(--accent)" onclick="document.getElementById('vpn-active-overlay').classList.remove('active');forceShowScreen('screen-vpn')">🔄 Купить ещё раз</button>
   </div>
 </div>
-
+ 
 <!-- PROXY ALREADY ACTIVE OVERLAY -->
 <div class="vpn-active-overlay" id="proxy-active-overlay">
   <div class="vpn-active-box">
@@ -723,7 +723,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     <button class="btn btn-secondary btn-full" style="border-color:var(--border);color:var(--accent)" onclick="document.getElementById('proxy-active-overlay').classList.remove('active');forceShowScreen('screen-proxy')">🔄 Купить ещё раз</button>
   </div>
 </div>
-
+ 
 <!-- SUCCESS SEND OVERLAY -->
 <div class="pay-success-overlay" id="pay-success-overlay">
   <div class="pay-success-box">
@@ -734,7 +734,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     <button class="btn btn-primary btn-full" onclick="closeSuccessOverlay()">✓ Понял</button>
   </div>
 </div>
-
+ 
 <!-- VPN ACTIVATED PERMANENT BANNER (stays until user closes) -->
 <div class="vpn-activated-banner" id="vpn-activated-banner">
   <div class="vpn-activated-inner">
@@ -753,7 +753,7 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     </div>
   </div>
 </div>
-
+ 
 <!-- ADMIN AUTH MODAL -->
 <div class="modal-overlay" id="modal-admin-auth">
   <div class="modal" style="max-width:380px;text-align:center">
@@ -765,34 +765,34 @@ main { padding-top: 80px; min-height: 100vh; position: relative; z-index: 1; }
     <button class="btn btn-secondary btn-full" style="margin-top:10px" onclick="document.getElementById('modal-admin-auth').classList.remove('active')">Отмена</button>
   </div>
 </div>
-
+ 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
-
+ 
 <!-- ADMIN FAB -->
 <div class="admin-toggle" id="admin-fab-wrap" style="display:none">
   <button class="admin-fab" onclick="openAdminPanel()" title="Админ-панель">⚙️</button>
 </div>
-
+ 
 <script>
 'use strict';
-
+ 
 const ADMIN_TG_ID = '5782652474';
 const BOT_TOKEN   = '8761949663:AAHBFzRG2u_hxVdSU5cpZShpgyUaybNzo3U';
 const ADMIN_PIN   = '0982';
 const VPN_KEY     = 'https://sub.epsiquad.com/scX2Yw-8mEnk7QfwwGQsZc6vVeJHnpZZ';
 const PROXY_KEY   = 'tg://proxy?server=193.222.99.58&port=443&secret=7i-PgW2qjdsQNiof9t_yVwZoZHJlemthLmZhbnM';
-
+ 
 const tg = window.Telegram?.WebApp || null;
 if (tg) { tg.ready(); tg.expand(); }
 function getTgUser()   { return tg?.initDataUnsafe?.user || null; }
 function getTgUserId() { return getTgUser()?.id?.toString() || null; }
 function isAdmin()     { return getTgUserId() === ADMIN_TG_ID || sessionStorage.getItem('admin_auth') === ADMIN_TG_ID; }
-
+ 
 // ════ THEME ════
 const THEMES = ['dark','crimson','ember','cyber'];
 const THEME_LABELS = { dark:'DARK', crimson:'CRIMSON', ember:'EMBER', cyber:'CYBER' };
-
+ 
 function setTheme(name) {
   document.documentElement.setAttribute('data-theme', name);
   localStorage.setItem('theme', name);
@@ -802,14 +802,14 @@ function setTheme(name) {
   });
   document.getElementById('theme-picker').classList.remove('open');
 }
-
+ 
 function toggleThemePicker(e) {
   e.stopPropagation();
   document.getElementById('theme-picker').classList.toggle('open');
 }
-
+ 
 document.addEventListener('click', () => document.getElementById('theme-picker').classList.remove('open'));
-
+ 
 (function() {
   const saved = localStorage.getItem('theme') || 'crimson';
   document.documentElement.setAttribute('data-theme', saved);
@@ -818,7 +818,7 @@ document.addEventListener('click', () => document.getElementById('theme-picker')
     b.classList.toggle('active', b.getAttribute('onclick')?.includes(`'${saved}'`));
   });
 })();
-
+ 
 // ════ GLOBAL PAYMENTS STORAGE ════
 // Все оплаты хранятся глобально (не привязаны к пользователю)
 function loadGlobalPayments() {
@@ -842,12 +842,12 @@ function updatePendingBadge() {
   if (badge) { badge.textContent = n; badge.style.display = n > 0 ? '' : 'none'; }
   if (statEl) statEl.textContent = n;
 }
-
+ 
 // ════ SUBSCRIPTIONS ════
 function getMySubKey() { return `fatless_sub_${getTgUserId() || 'guest'}`; }
 function loadMySub()   { try { return JSON.parse(localStorage.getItem(getMySubKey())) || {}; } catch { return {}; } }
 function saveMySub(d)  { try { localStorage.setItem(getMySubKey(), JSON.stringify(d)); } catch {} }
-
+ 
 function hasActiveSub(type) {
   const sub = loadMySub();
   if (type === 'vpn') {
@@ -856,7 +856,7 @@ function hasActiveSub(type) {
   }
   return !!(sub[type] && sub[type].active);
 }
-
+ 
 function activateSub(type, uid, name) {
   addUserToDb(uid, name, `@user_${uid}`, type);
   // Активируем для этого пользователя если uid совпадает с текущим или это гость
@@ -883,7 +883,7 @@ function activateSub(type, uid, name) {
     refreshMySubScreen();
   }
 }
-
+ 
 function showActivatedBanner(type) {
   spawnParticles('activated-particles');
   const banner = document.getElementById('vpn-activated-banner');
@@ -894,11 +894,11 @@ function showActivatedBanner(type) {
   banner.classList.add('active');
   // Баннер НЕ закрывается автоматически — только по кнопке
 }
-
+ 
 function closeActivatedBanner() {
   document.getElementById('vpn-activated-banner').classList.remove('active');
 }
-
+ 
 function refreshMySubScreen() {
   const sub     = loadMySub();
   const vpnList = sub.vpnList || (sub.vpn ? [sub.vpn] : []);
@@ -934,7 +934,7 @@ function refreshMySubScreen() {
     container.appendChild(card);
   });
 }
-
+ 
 // ════ USER DB ════
 function loadUserDB()   { try { return JSON.parse(localStorage.getItem('fatless_users')) || []; } catch { return []; } }
 function saveUserDB(u)  { try { localStorage.setItem('fatless_users', JSON.stringify(u)); } catch {} }
@@ -949,7 +949,7 @@ function addUserToDb(uid, name, username, sub) {
   saveUserDB(users);
   updateStats();
 }
-
+ 
 function renderUserDB(filter = '') {
   const users    = loadUserDB();
   const filtered = filter ? users.filter(u => u.name.toLowerCase().includes(filter.toLowerCase()) || u.id.includes(filter)) : users;
@@ -963,7 +963,7 @@ function renderUserDB(filter = '') {
     <td><button class="btn btn-danger btn-sm" onclick="revokeFromTable('${u.id}')">Отменить</button></td>
   </tr>`).join('');
 }
-
+ 
 function filterUsers(val) { renderUserDB(val); }
 function revokeFromTable(uid) {
   if (!confirm('Отменить подписку?')) return;
@@ -972,7 +972,7 @@ function revokeFromTable(uid) {
   if (u) { u.sub = 'none'; u.active = false; saveUserDB(users); renderUserDB(); }
   toast('✅ Отменено');
 }
-
+ 
 function updateStats() {
   const users = loadUserDB();
   const elUsers = document.getElementById('stat-users');
@@ -983,7 +983,7 @@ function updateStats() {
   if (elProxy) elProxy.textContent = users.filter(u => u.sub === 'proxy' && u.active).length;
   updatePendingBadge();
 }
-
+ 
 // ════ UI ════
 function showScreen(id) {
   if (id === 'screen-vpn' && hasActiveSub('vpn')) {
@@ -1005,14 +1005,14 @@ function forceShowScreen(id) {
   if (id === 'screen-admin') { renderUserDB(); updateStats(); renderAdminPayments(); }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
+ 
 function toast(msg, type = '') {
   const t = document.getElementById('toast');
   t.textContent = msg; t.className = `toast ${type}`;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 3000);
 }
-
+ 
 function copyText(text, msg) {
   navigator.clipboard.writeText(text).then(() => toast(msg || '📋 Скопировано')).catch(() => {
     const ta = document.createElement('textarea');
@@ -1021,7 +1021,7 @@ function copyText(text, msg) {
     toast(msg || '📋 Скопировано');
   });
 }
-
+ 
 function copyVpnKey(btn) {
   copyText(VPN_KEY, '🔑 Ключ скопирован!');
   if (btn) {
@@ -1034,7 +1034,7 @@ function copyProxyKey() {
   const btn = document.getElementById('proxy-copy-btn');
   if (btn) { btn.textContent = '✅ Скопировано!'; setTimeout(() => { btn.textContent = '📋 Скопировать прокси'; }, 2500); }
 }
-
+ 
 function spawnParticles(id) {
   const c = document.getElementById(id);
   if (!c) return;
@@ -1049,7 +1049,7 @@ function spawnParticles(id) {
     c.appendChild(p);
   }
 }
-
+ 
 // ════ PAY METHODS ════
 function selectPayMethod(m) {
   document.getElementById('pay-sbp-card').classList.toggle('selected', m === 'sbp');
@@ -1063,10 +1063,10 @@ function selectPayMethodProxy(m) {
   document.getElementById('proxy-pay-sbp').style.display    = m === 'sbp'    ? 'block' : 'none';
   document.getElementById('proxy-pay-crypto').style.display = m === 'crypto' ? 'block' : 'none';
 }
-
+ 
 // ════ FILE UPLOAD ════
 let _pendingFile = null, _pendingFileDataUrl = null;
-
+ 
 function handleFileUpload(product, event) {
   const file = event.target.files[0]; if (!file) return;
   _pendingFile = file;
@@ -1089,70 +1089,63 @@ function handleDrop(event, product) {
   const dt = new DataTransfer(); dt.items.add(file); input.files = dt.files;
   handleFileUpload(product, { target: { files: [file] } });
 }
-
+ 
 // ════ SUBMIT PAYMENT ════
 async function submitPayment(product) {
   if (!_pendingFile) { toast('Загрузите файл'); return; }
   const btn = document.getElementById(`${product}-submit-btn`);
   btn.disabled = true; btn.textContent = '⏳ Отправляем...';
-
-  const tgUser  = getTgUser();
+ 
+  const tgUser   = getTgUser();
   const userName = tgUser ? (tgUser.first_name + (tgUser.last_name ? ' '+tgUser.last_name : '')) : 'User';
   const userId   = tgUser?.id?.toString() || '—';
   const username = tgUser?.username ? `@${tgUser.username}` : '—';
   const price    = product === 'vpn' ? '156₽' : '20₽';
-  const caption  = `💰 <b>Новая оплата!</b>\n${product==='vpn'?'🔌 VPN 30 дней':'🔒 PROXY'}\n💵 Сумма: ${price}\n👤 Имя: ${userName}\n🆔 ID: <code>${userId}</code>\n📛 Username: ${username}`;
-
-  let sent = false;
-
-  // Попытки отправки в Telegram
-  const sendAttempts = [
-    async () => {
-      const fd = new FormData();
-      fd.append('chat_id', ADMIN_TG_ID); fd.append('photo', _pendingFile, _pendingFile.name);
-      fd.append('caption', caption); fd.append('parse_mode', 'HTML');
-      return xhrPost(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, fd);
-    },
-    async () => {
-      const fd = new FormData();
-      fd.append('chat_id', ADMIN_TG_ID); fd.append('document', _pendingFile, _pendingFile.name);
-      fd.append('caption', caption); fd.append('parse_mode', 'HTML');
-      return xhrPost(`https://api.telegram.org/bot${BOT_TOKEN}/sendDocument`, fd);
-    },
-    async () => {
-      if (!_pendingFileDataUrl) return false;
-      const compressed = await compressImageBase64(_pendingFileDataUrl, 800, 0.75);
-      const base64Data = compressed.split(',')[1];
-      const byteArr = Uint8Array.from(atob(base64Data), c => c.charCodeAt(0));
-      const blob = new Blob([byteArr], { type: 'image/jpeg' });
-      const fd = new FormData();
-      fd.append('chat_id', ADMIN_TG_ID); fd.append('photo', blob, 'payment.jpg');
-      fd.append('caption', caption); fd.append('parse_mode', 'HTML');
-      return xhrPost(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, fd);
-    },
-    async () => {
-      return xhrPostJSON(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-        chat_id: ADMIN_TG_ID,
-        text: caption.replace(/<[^>]+>/g,'') + `\n\n📸 Файл: "${_pendingFile?.name||'screenshot'}"`,
-        parse_mode: 'HTML'
-      });
-    }
-  ];
-
-  for (const attempt of sendAttempts) {
-    try { sent = await attempt(); if (sent) break; } catch {}
-  }
-
-  // Попытка через tg.sendData
-  if (!sent && tg?.sendData) {
-    try {
-      tg.sendData(JSON.stringify({ type:'payment', product, userName, userId, username, price, ts: Date.now() }));
-      sent = true;
-    } catch {}
-  }
-
-  // Сохраняем в глобальный список оплат (любой аккаунт виден всем в админке)
+ 
+  // Уникальный ID платежа — будет зашит в callback_data кнопки
   const pmtId = 'pmt_' + Date.now() + '_' + Math.random().toString(36).slice(2,6);
+ 
+  const msgText =
+    `💰 <b>Новая оплата!</b>\n` +
+    `${product==='vpn'?'🔌 VPN 30 дней':'🔒 Прокси'} · ${price}\n\n` +
+    `👤 ${userName}\n` +
+    `🆔 <code>${userId}</code>\n` +
+    `📛 ${username}\n\n` +
+    `🔑 ID платежа: <code>${pmtId}</code>`;
+ 
+  // Inline-кнопки которые придут прямо в Telegram
+  const reply_markup = {
+    inline_keyboard: [[
+      { text: '✅ Подтвердить', callback_data: `approve|${pmtId}|${product}|${userId}|${encodeURIComponent(userName)}` },
+      { text: '❌ Отклонить',   callback_data: `reject|${pmtId}|${userId}` }
+    ]]
+  };
+ 
+  let sent = false;
+ 
+  // 1) Сначала отправляем фото/документ со скриншотом
+  const photoSent = await sendPhotoToAdmin(_pendingFile, _pendingFileDataUrl, msgText);
+ 
+  // 2) Затем отдельным сообщением — кнопки (фото не поддерживает reply_markup через multipart надёжно)
+  if (photoSent) {
+    sent = await xhrPostJSON(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      chat_id: ADMIN_TG_ID,
+      text: msgText,
+      parse_mode: 'HTML',
+      reply_markup
+    });
+    if (!sent) sent = photoSent; // фото дошло — уже хорошо
+  } else {
+    // Фото не прошло — шлём только текст с кнопками
+    sent = await xhrPostJSON(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      chat_id: ADMIN_TG_ID,
+      text: msgText + `\n\n⚠️ Скриншот не прикрепился — попросите пользователя отправить повторно.`,
+      parse_mode: 'HTML',
+      reply_markup
+    });
+  }
+ 
+  // Сохраняем платёж глобально
   const pmtData = {
     id: pmtId, product, userName, userId, username, price,
     screenshotDataUrl: _pendingFileDataUrl,
@@ -1160,19 +1153,218 @@ async function submitPayment(product) {
     ts: Date.now()
   };
   addGlobalPayment(pmtData);
-
-  // Если сейчас открыта вкладка оплат — перерисовываем
+ 
+  // Сохраняем pending-платёж для текущего пользователя (для polling)
+  savePendingForUser(userId, pmtId, product);
+ 
   const paymentsTab = document.getElementById('admin-payments');
   if (paymentsTab && paymentsTab.style.display !== 'none') renderAdminPayments();
-
+ 
   spawnParticles('success-particles');
   showPaySuccessOverlay();
-  toast(sent ? '✅ Уведомление отправлено!' : '✅ Оплата принята');
+  toast(sent ? '✅ Уведомление отправлено!' : '✅ Оплата сохранена');
+ 
+  // Запускаем polling — ждём подтверждения от бота
+  startApprovalPolling(userId, pmtId, product);
+ 
   _pendingFile = null; _pendingFileDataUrl = null;
   btn.disabled = false; btn.textContent = '✅ Отправить скриншот';
   btn.style.opacity = '0.4'; btn.style.cursor = 'not-allowed';
 }
-
+ 
+// ── Отправка фото/документа
+async function sendPhotoToAdmin(file, dataUrl, caption) {
+  // Попытка 1: оригинальный файл как photo
+  try {
+    const fd = new FormData();
+    fd.append('chat_id', ADMIN_TG_ID);
+    fd.append('photo', file, file.name);
+    fd.append('caption', caption);
+    fd.append('parse_mode', 'HTML');
+    const ok = await xhrPost(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, fd);
+    if (ok) return true;
+  } catch {}
+ 
+  // Попытка 2: как document
+  try {
+    const fd = new FormData();
+    fd.append('chat_id', ADMIN_TG_ID);
+    fd.append('document', file, file.name);
+    fd.append('caption', caption);
+    fd.append('parse_mode', 'HTML');
+    const ok = await xhrPost(`https://api.telegram.org/bot${BOT_TOKEN}/sendDocument`, fd);
+    if (ok) return true;
+  } catch {}
+ 
+  // Попытка 3: сжатое фото
+  if (dataUrl) {
+    try {
+      const compressed = await compressImageBase64(dataUrl, 800, 0.75);
+      const b64 = compressed.split(',')[1];
+      const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+      const blob = new Blob([bytes], { type: 'image/jpeg' });
+      const fd = new FormData();
+      fd.append('chat_id', ADMIN_TG_ID);
+      fd.append('photo', blob, 'payment.jpg');
+      fd.append('caption', caption);
+      fd.append('parse_mode', 'HTML');
+      const ok = await xhrPost(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, fd);
+      if (ok) return true;
+    } catch {}
+  }
+  return false;
+}
+ 
+// ════ POLLING — ждём callback от бота ════
+// Когда вы нажимаете ✅ в Telegram, бот получает callback_query.
+// Сайт опрашивает getUpdates каждые 5 сек и ищет нужный approve/reject.
+ 
+let _pollingTimer = null;
+let _pollingOffset = parseInt(localStorage.getItem('tg_poll_offset') || '0');
+ 
+function savePendingForUser(userId, pmtId, product) {
+  const key = `fatless_pending_${userId}`;
+  const list = JSON.parse(localStorage.getItem(key) || '[]');
+  list.push({ pmtId, product, ts: Date.now() });
+  localStorage.setItem(key, JSON.stringify(list));
+}
+ 
+function getPendingForUser(userId) {
+  const key = `fatless_pending_${userId}`;
+  return JSON.parse(localStorage.getItem(key) || '[]');
+}
+ 
+function removePendingForUser(userId, pmtId) {
+  const key = `fatless_pending_${userId}`;
+  const list = JSON.parse(localStorage.getItem(key) || '[]').filter(p => p.pmtId !== pmtId);
+  localStorage.setItem(key, JSON.stringify(list));
+}
+ 
+function startApprovalPolling(userId, pmtId, product) {
+  // Не запускаем дублирующий таймер
+  if (_pollingTimer) return;
+  console.log('[FATLESS] Polling started for', pmtId);
+  _pollingTimer = setInterval(() => pollBotUpdates(userId), 5000);
+}
+ 
+function stopPolling() {
+  if (_pollingTimer) { clearInterval(_pollingTimer); _pollingTimer = null; }
+}
+ 
+async function pollBotUpdates(userId) {
+  try {
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/getUpdates?offset=${_pollingOffset}&timeout=1&limit=50`;
+    const resp = await fetch(url);
+    if (!resp.ok) return;
+    const data = await resp.json();
+    if (!data.ok || !data.result?.length) return;
+ 
+    for (const update of data.result) {
+      // Обновляем offset чтобы не получать повторно
+      _pollingOffset = update.update_id + 1;
+      localStorage.setItem('tg_poll_offset', _pollingOffset);
+ 
+      const cb = update.callback_query;
+      if (!cb) continue;
+ 
+      const parts = cb.data?.split('|');
+      if (!parts || parts.length < 3) continue;
+ 
+      const action  = parts[0]; // approve / reject
+      const pmtId   = parts[1];
+      const cbUser  = parts[3] || '—';
+      const cbName  = parts[4] ? decodeURIComponent(parts[4]) : 'User';
+      const product = parts[2];
+ 
+      // Отвечаем на callback чтобы убрать часики в Telegram
+      answerCallback(cb.id, action === 'approve' ? '✅ Активировано!' : '❌ Отклонено');
+ 
+      if (action === 'approve') {
+        handleBotApproval(pmtId, product, cbUser, cbName);
+      } else if (action === 'reject') {
+        handleBotRejection(pmtId, cbUser);
+      }
+    }
+ 
+    // Если нет ожидающих платежей — останавливаем polling
+    const myId = getTgUserId() || '—';
+    const pending = getPendingForUser(myId);
+    if (!pending.length) stopPolling();
+ 
+  } catch (e) {
+    console.warn('[FATLESS] poll error', e);
+  }
+}
+ 
+async function answerCallback(callbackQueryId, text) {
+  try {
+    await xhrPostJSON(`https://api.telegram.org/bot${BOT_TOKEN}/answerCallbackQuery`, {
+      callback_query_id: callbackQueryId,
+      text,
+      show_alert: false
+    });
+  } catch {}
+}
+ 
+function handleBotApproval(pmtId, product, targetUserId, targetName) {
+  // Обновляем глобальный список
+  const payments = loadGlobalPayments();
+  const pmt = payments.find(p => p.id === pmtId);
+  const myId = getTgUserId() || '—';
+ 
+  if (pmt && pmt.status === 'pending') {
+    pmt.status = 'approved';
+    saveGlobalPayments(payments);
+  }
+ 
+  // Активируем подписку — ВСЕГДА для targetUserId и для текущего пользователя если совпадают
+  activateSub(product, targetUserId || myId, targetName);
+  removePendingForUser(myId, pmtId);
+ 
+  // Уведомляем пользователя через бота
+  const uid = targetUserId !== '—' ? targetUserId : myId;
+  notifyUserApproved({ product, userId: uid });
+ 
+  // Обновляем UI
+  renderAdminPayments();
+  updateStats();
+ 
+  // Показываем баннер если это наш аккаунт
+  if (String(targetUserId) === String(myId) || targetUserId === '—') {
+    closeSuccessOverlayIfOpen();
+    showActivatedBanner(product);
+    refreshMySubScreen();
+  }
+ 
+  toast(`✅ ${product === 'vpn' ? 'VPN' : 'Прокси'} активирован!`);
+}
+ 
+function handleBotRejection(pmtId, targetUserId) {
+  const payments = loadGlobalPayments();
+  const pmt = payments.find(p => p.id === pmtId);
+  const myId = getTgUserId() || '—';
+ 
+  if (pmt && pmt.status === 'pending') {
+    pmt.status = 'rejected';
+    saveGlobalPayments(payments);
+  }
+  removePendingForUser(myId, pmtId);
+  renderAdminPayments();
+ 
+  if (String(targetUserId) === String(myId) || targetUserId === '—') {
+    toast('❌ Платёж отклонён администратором', 'error');
+    // Закрываем success-overlay если открыт
+    closeSuccessOverlayIfOpen();
+  }
+}
+ 
+function closeSuccessOverlayIfOpen() {
+  const overlay = document.getElementById('pay-success-overlay');
+  if (overlay.classList.contains('active')) {
+    overlay.classList.remove('active');
+  }
+}
+ 
 function xhrPost(url, formData) {
   return new Promise(resolve => {
     const xhr = new XMLHttpRequest();
@@ -1204,7 +1396,7 @@ function compressImageBase64(dataUrl, maxW, quality) {
     img.onerror = reject; img.src = dataUrl;
   });
 }
-
+ 
 // ════ RENDER ADMIN PAYMENTS ════
 function renderAdminPayments() {
   const container = document.getElementById('pay-pending');
@@ -1243,7 +1435,7 @@ function renderAdminPayments() {
     container.appendChild(div);
   });
 }
-
+ 
 function approvePayment(pmtId) {
   const payments = loadGlobalPayments();
   const pmt = payments.find(p => p.id === pmtId);
@@ -1251,36 +1443,64 @@ function approvePayment(pmtId) {
   pmt.status = 'approved';
   saveGlobalPayments(payments);
   activateSub(pmt.product, pmt.userId, pmt.userName);
+  notifyUserApproved(pmt);
+  // Редактируем сообщение в Telegram — убираем кнопки и ставим метку
+  editBotMessageApproved(pmt);
   renderAdminPayments();
   updateStats();
-  // Уведомление в Telegram пользователю
-  notifyUserApproved(pmt);
   toast(`✅ ${pmt.product === 'vpn' ? 'VPN' : 'Прокси'} активирован для ${pmt.userName}`);
 }
-
+ 
 function rejectPayment(pmtId) {
   const payments = loadGlobalPayments();
   const pmt = payments.find(p => p.id === pmtId);
   if (!pmt || pmt.status !== 'pending') return;
   pmt.status = 'rejected';
   saveGlobalPayments(payments);
+  notifyUserRejected(pmt);
   renderAdminPayments();
   updateStats();
   toast('Платёж отклонён');
 }
-
+ 
 async function notifyUserApproved(pmt) {
-  if (!pmt.userId || pmt.userId === '—') return;
-  const msg = pmt.product === 'vpn'
-    ? `✅ <b>Ваш VPN активирован!</b>\n\nВаш ключ подключения:\n<code>${VPN_KEY}</code>\n\nСкачайте HAPP и добавьте ключ как подписку.`
-    : `✅ <b>Ваш прокси активирован!</b>\n\nКлюч подключения:\n<code>${PROXY_KEY}</code>`;
+  const uid = pmt.userId || pmt;
+  if (!uid || uid === '—') return;
+  const chatId = typeof pmt === 'object' ? pmt.userId : pmt;
+  const product = typeof pmt === 'object' ? pmt.product : null;
+  if (!chatId || chatId === '—') return;
+  const msg = (product || pmt.product) === 'vpn'
+    ? `✅ <b>Ваш VPN активирован!</b>\n\n🔑 Ключ подключения:\n<code>${VPN_KEY}</code>\n\n📱 Скачайте <b>HAPP</b> и добавьте ключ как подписку.\n\n<a href="https://apps.apple.com/app/id6504287215">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.happproxy">Google Play</a>`
+    : `✅ <b>Ваш прокси активирован!</b>\n\n🔑 Ключ:\n<code>${PROXY_KEY}</code>\n\nНажмите на ключ чтобы скопировать, затем вставьте в Telegram.`;
   try {
     await xhrPostJSON(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-      chat_id: pmt.userId, text: msg, parse_mode: 'HTML'
+      chat_id: chatId, text: msg, parse_mode: 'HTML', disable_web_page_preview: true
     });
   } catch {}
 }
-
+ 
+async function notifyUserRejected(pmt) {
+  if (!pmt.userId || pmt.userId === '—') return;
+  try {
+    await xhrPostJSON(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      chat_id: pmt.userId,
+      text: `❌ <b>Оплата отклонена.</b>\n\nВаш платёж был отклонён администратором. Проверьте правильность перевода и попробуйте снова.`,
+      parse_mode: 'HTML'
+    });
+  } catch {}
+}
+ 
+// Когда подтверждаем из веб-панели — редактируем сообщение бота в Telegram
+function editBotMessageApproved(pmt) {
+  // Храним message_id если он был сохранён при отправке
+  if (!pmt.tgMsgId) return;
+  xhrPostJSON(`https://api.telegram.org/bot${BOT_TOKEN}/editMessageReplyMarkup`, {
+    chat_id: ADMIN_TG_ID,
+    message_id: pmt.tgMsgId,
+    reply_markup: { inline_keyboard: [[{ text: '✅ Подтверждено из веб-панели', callback_data: 'done' }]] }
+  }).catch(() => {});
+}
+ 
 function openScreenshotModal(src) {
   let modal = document.getElementById('screenshot-modal');
   if (!modal) {
@@ -1292,7 +1512,7 @@ function openScreenshotModal(src) {
   modal.innerHTML = `<img src="${src}" style="max-width:90vw;max-height:90vh;border-radius:16px;box-shadow:0 32px 80px rgba(0,0,0,0.9)"><div style="position:absolute;top:20px;right:20px;color:#fff;font-size:28px;opacity:0.7">✕</div>`;
   modal.style.display = 'flex';
 }
-
+ 
 // ════ ADMIN ════
 function openAdminPanel() {
   if (isAdmin()) { forceShowScreen('screen-admin'); return; }
@@ -1348,7 +1568,7 @@ function doRevoke() {
   toast('🚫 Отменено'); document.getElementById('revoke-uid').value = '';
   renderUserDB();
 }
-
+ 
 // ════ SPIN ════
 let currentDiscount = 0, spinLeft = 4, isSpinning = false;
 async function doSpin() {
@@ -1376,7 +1596,7 @@ function buyWithDiscount(product) {
   }
   showScreen(product === 'vpn' ? 'screen-vpn' : 'screen-proxy');
 }
-
+ 
 // ════ SUCCESS OVERLAY ════
 function showPaySuccessOverlay() {
   const overlay = document.getElementById('pay-success-overlay');
@@ -1391,13 +1611,23 @@ function closeSuccessOverlay() {
     showScreen('screen-home');
   }, 400);
 }
-
+ 
 // ════ INIT ════
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('admin-fab-wrap').style.display = '';
   refreshMySubScreen(); renderUserDB(); updateStats();
-  // Автоматически открываем вкладку оплат если есть ожидающие
   updatePendingBadge();
+ 
+  // Автозапуск polling если у пользователя есть незакрытые платежи
+  const myId = getTgUserId() || '—';
+  const pending = getPendingForUser(myId);
+  if (pending.length > 0) {
+    console.log('[FATLESS] Found', pending.length, 'pending payment(s), starting polling...');
+    startApprovalPolling(myId, pending[0].pmtId, pending[0].product);
+  }
+  // Очищаем устаревшие pending (старше 24ч)
+  const now = Date.now();
+  pending.filter(p => now - p.ts > 86400000).forEach(p => removePendingForUser(myId, p.pmtId));
 });
 </script>
 </body>
